@@ -1,0 +1,20 @@
+uuid: 7baf711d-a7ab-49cd-bf4d-9df516415817
+langcode: en
+status: true
+dependencies:
+  theme:
+    - southend
+_core:
+  default_config_hash: Q9_2whdOj1YIomfvsIfopROW4FT_X5pY0DjdOiOaQ5U
+id: southend_primary_admin_actions
+theme: southend
+region: header
+weight: -5
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

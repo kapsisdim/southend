@@ -1,0 +1,12 @@
+<div class="container">
+  <h1>{{ node.title.value|raw }}</h1>
+  <img src="{{ file_url(node.field_image.entity.uri.value) }}">
+  <p>{{ node.field_datetime.value|date("j F Y")|upper }}</p>
+  <p>{{ node.field_datetime.value|date("g:i A") }}</p>
+  {{ content.body }}
+  {% for schedule in content.field_schedule['#items'] %}
+    <p>{{ schedule.entity.field_text.value|raw }}</p>
+    <p>{{ schedule.entity.field_datetime.value|date("j F Y")|upper }}</p>
+    <p>{{ schedule.entity.field_time.value|date("g:i A") }}</p>
+  {% endfor %}
+</div>

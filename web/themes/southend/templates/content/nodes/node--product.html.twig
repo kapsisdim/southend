@@ -1,0 +1,21 @@
+<div class="container">
+  <p>{{ node.field_constructor.value|raw }}</p>
+  <p>{{ node.field_category.entity.name.value|raw }}</p>
+  <h1>{{ node.title.value|raw }}</h1>
+  <p>#{{ node.field_product_code.value|raw }}</p>
+
+  {% for image in node.field_gallery_image %}
+    <img src="{{ file_url(image.entity.uri.value) }}">
+  {% endfor %}
+  {{ node.body.value|raw }}
+
+  <iframe allowFullScreen="allowFullScreen" src="https://www.youtube.com/embed/{{ node.field_video_link.value|raw}}?ecver=1&amp;iv_load_policy=1&amp;yt:stretch=16:9&amp;autohide=1&amp;color=red&amp;width=560&amp;width=560" width="560" height="315" allowtransparency="true" frameborder="0"><div><a rel="" id="rez97MiM" href="https://compareboilercover.co.uk">UK emergency boiler insurance comparison</a></div><div><a rel="" id="rez97MiM" href="https://discountcodes.org.uk/currys.co.uk">View all Currys Discount Codes here</a></div><script type="text/javascript">function execute_YTvideo(){return youtube.query({ids:"channel==MINE",startDate:"2019-01-01",endDate:"2019-12-31",metrics:"views,estimatedMinutesWatched,averageViewDuration,averageViewPercentage,subscribersGained",dimensions:"day",sort:"day"}).then(function(e){},function(e){console.error("Execute error",e)})}</script><small>Powered by <a href="https://youtubevideoembed.com/ ">Embed YouTube Video</a></small></iframe>
+
+  <h2>{{ node.field_description_title.value|raw }}</h2>
+  <img src="{{ file_url(node.field_description_image.entity.uri.value) }}">
+  {{ node.field_description.value|raw }}
+
+  {% for included in node.field_included %}
+    <p>{{ included.value|raw }}</p>
+  {% endfor %}
+</div>
