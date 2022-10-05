@@ -16,11 +16,13 @@
     ],
     "require": {
         "composer/installers": "^1.9",
+        "drupal/commerce": "2.31",
         "drupal/core-composer-scaffold": "^9.4",
         "drupal/core-project-message": "^9.4",
         "drupal/core-recommended": "^9.4",
         "drupal/ctools": "^4.0",
         "drupal/devel": "^4.1",
+        "drupal/inline_entity_form": "@RC",
         "drupal/metatag": "^1.21",
         "drupal/paragraphs": "^1.14",
         "drupal/pathauto": "^1.11",
