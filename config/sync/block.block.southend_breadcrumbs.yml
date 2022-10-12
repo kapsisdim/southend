@@ -1,0 +1,22 @@
+uuid: 48c14f55-6122-4949-bb74-653e11035e5b
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - southend
+_core:
+  default_config_hash: VhBzWb7lMRtIOg9G7VSw_0uopi-7zXeHq4vXqqV1HFE
+id: southend_breadcrumbs
+theme: southend
+region: header
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility: {  }

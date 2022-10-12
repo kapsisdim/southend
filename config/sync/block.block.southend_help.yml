@@ -1,0 +1,22 @@
+uuid: cca6ce0d-b3d8-486c-90d7-7a7a1a280010
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - southend
+_core:
+  default_config_hash: VfPFqqxfkomud5CO8DUijw85QIl9GIxh_nIxLOYESxg
+id: southend_help
+theme: southend
+region: header
+weight: 0
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }

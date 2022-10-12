@@ -1,0 +1,21 @@
+name: Hellamco
+type: theme
+description: 'A responsive theme for Hellamco'
+core_version_requirement: ^8.9 || ^9
+
+libraries:
+  - hellamco/global-styling
+
+base theme: false
+
+regions:
+  header: Header
+  menu: Menu
+  content: Content
+  webform: WebForm
+  cookies: Cookies
+  footer: Footer
+  not_used: Disabled
+
+stylesheets-remove:
+  - core/assets/vendor/normalize-css/normalize.css

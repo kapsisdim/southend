@@ -1,0 +1,9 @@
+<div class="container">
+  <img src="{{ file_url(node.field_image.entity.uri.value) }}">
+  <p>{{ node.field_date.value|date("j F Y")|upper }}</p>
+  <h1>{{ node.title.value|raw }}</h1>
+  {{ content.body }}
+</div>
+<!-- ShareThis BEGIN -->
+  <div class="sharethis-inline-share-buttons"></div>
+<!-- ShareThis END -->

@@ -1,0 +1,53 @@
+<?php
+
+function hellamco_preprocess_html(&$variables)
+{
+    $request = \Symfony\Component\HttpFoundation\Request::createFromGlobals();
+    if (!$request->headers->get('user-agent') || stripos($request->headers->get('user-agent'), 'Speed Insights') === false) {
+        $variables['is_not_pagespeed'] = true;
+    }
+}
+
+function hellamco_theme_suggestions_page_alter(array &$suggestions, array $variables)
+{
+    if ($node = \Drupal::routeMatch()->getParameter('node')) {
+        $content_type = $node->bundle();
+        $suggestions[] = 'page__' . $content_type;
+    }
+}
+
+function hellamco_theme_suggestions_block_alter(array &$suggestions, array $variables)
+{
+    // Block suggestions for custom block bundles.
+    if (isset($variables['elements']['content']['#block_content'])) {
+        array_splice($suggestions, 1, 0, 'block__bundle__' . $variables['elements']['content']['#block_content']->bundle());
+    }
+}
+
+function hellamco_preprocess_views_view__search__page(&$variables)
+{
+  $variables['searchTerm'] = \Drupal::request()->query->get('search');
+}
+
+function hellamco_preprocess_region__menu(&$variables)
+{
+    $language = \Drupal::languageManager()->getCurrentLanguage();
+    $variables['currentLanguage'] = $language->getId();
+}
+
+function kallas_preprocess_links__language_block(&$variables)
+{
+    $currentLanguage = \Drupal::languageManager()->getCurrentLanguage();
+
+    foreach ($variables['links'] as $i => $link) {
+        // Convert the language fullname to the language id
+        $linkLanguage = $link['link']['#options']['language'];
+        $variables['links'][$i]['link']['#title'] = strtoupper($linkLanguage->get('id'));
+
+        if ($linkLanguage->getId() !== $currentLanguage->getId()) {
+        $variables['links'][$i]['link']['#is_active'] = false;
+        } else {
+        $variables['links'][$i]['link']['#is_active'] = true;
+        }
+    }
+}
