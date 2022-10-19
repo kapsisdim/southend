@@ -16,7 +16,7 @@
                     <i id="bars" class="fa fa-bars"></i>
                 </div>
                 <div class="header-item">
-                    <a href="home.html">
+                    <a href="index.html">
                         <img src="../images/logo.svg" alt="logo" width="250" class="logo">
                     </a>
                 </div>
@@ -24,7 +24,7 @@
                     <li><a ><i href="search.html" class="fas fa-search"></i></a></li>
                     <li id="cart-container">
                         <a href="cart.html"><i class="fas fa-shopping-bag"></i></a>
-                        <div class="mini-cart font-anek">
+                        <div class="mini-cart-hidden font-anek">
                             Your shopping cart is empty!
                         </div>
                     </li>
@@ -48,6 +48,10 @@
 
         <div class="main-container">
             <div class="breadcrumb">ALL</div>
+            <div class="filters-mobile" id="filters-mobile">
+                <i class="fas fa-filter"></i>
+                <div>Filters</div>
+            </div>
             <div class="main-content">
                 <div class="filters">
                     <div class="filter-header">Categories</div>
@@ -151,15 +155,25 @@
             </div>
         </footer>
     </div>
-    <div class="container flex" id="navbar-mobile">
-        <li>
+    <div class="container flex slider" id="navbar-mobile">
+        <li id="main-menu-li">
             <h3>MENU</h3>
-            <i id="close" class="fas fa-times"></i>
+            <i class="fas fa-times close"></i>
         </li>
         <li><a href="shop.html">SHOP</a></li>
         <li><a href="collections.html">COLLECTIONS</a></li>
         <li><a href="about.html">ABOUT</a></li>
         <li><a href="contact.html">CONTACT</a></li>
+    </div>
+    <div class="container flex slider" id="filters-overlay-mobile">
+        <li id="filters-li">
+            <h3>Categories</h3>
+            <i class="fas fa-times close"></i>
+        </li>
+        <li><a href="">Category 1</a></li>
+        <li><a href="">Category 2</a></li>
+        <li><a href="">Category 3</a></li>
+        <li><a href="">Category 4</a></li>
     </div>
     <script src="../src/js/index.js"></script>
 </body>
