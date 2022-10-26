@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Southend Apparel</title>
+    <link rel="stylesheet" href="../src/css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+</head>
+<body>
+    <div id="overlay">
+        <header>
+            <div class="container flex">
+                <div id="mobile">
+                    <i id="bars" class="fa fa-bars"></i>
+                </div>
+                <div class="header-item">
+                    <a href="index.html">
+                        <img src="../images/logo.svg" alt="logo" width="250" class="logo">
+                    </a>
+                </div>
+                <div class="justify-self-end flex align-center">
+                    <li><a ><i href="search.html" class="fas fa-search"></i></a></li>
+                    <li id="cart-container">
+                        <a href="cart.html"><i class="fas fa-shopping-bag"></i></a>
+                        <div class="mini-cart-hidden font-anek">
+                            Your shopping cart is empty!
+                        </div>
+                    </li>
+                </div>
+            </div>
+            <div class="container flex" id="navbar-desktop">
+                <li class="drop-down-button">
+                    <a class="active" href="shop.html">SHOP</a>
+                    <div class="drop-down">
+                        <a href=""><div class="submenu-link">Category 1</div></a>
+                        <a href=""><div class="submenu-link">Category 2</div></a>
+                        <a href=""><div class="submenu-link">Category 3</div></a>
+                        <a href=""><div class="submenu-link">Category 4</div></a>
+                    </div>
+                </li>
+                <li><a href="collections.html">COLLECTIONS</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </div>
+        </header>
+
+        <div class="main-container">
+            <div class="breadcrumb">SHOPPING CART</div>
+            <div class="cart-item container font-anek border-bottom spacing-2 mobile-display-none">
+                <div class="justify-self-start">PRODUCT</div>
+                <div>PRICE</div>
+                <div>QUANTITY</div>
+                <div>REMOVE</div>
+                <div class="justify-self-end">TOTAL</div>
+            </div>
+            <div class="cart-item container border-bottom font-anek">
+                <div class="justify-self-start flex align-center">
+                    <a href="product.html"><img src="../images/products_dummy/1.jpeg" alt="Image 1" width="100"></a>
+                    <div class="margin-inline-20">
+                        <a href="product.html"><h4 class="spacing-2">Title 1</h4></a>
+                        <div>Size: M</div>
+                    </div>
+                </div>
+                <div class="spacing-2 mobile-display-none">$20.00</div>
+                <div>1</div>
+                <i class="far fa-trash-alt"></i>
+                <div class="justify-self-end spacing-2">$20.00</div>
+            </div>
+            <div class="cart-item container border-bottom font-anek">
+                <div class="justify-self-start flex align-center">
+                    <a href="product.html"><img src="../images/products_dummy/3.jpeg" alt="Image 3" width="100"></a>
+                    <div class="margin-inline-20">
+                        <a href="product.html"><h4 class="spacing-2">Title 3</h4></a>
+                        <div>Size: L</div>
+                    </div>
+                </div>
+                <div class="spacing-2 mobile-display-none">$15.00</div>
+                <div>1</div>
+                <i class="far fa-trash-alt"></i>
+                <div class="justify-self-end spacing-2">$15.00</div>
+            </div>
+            <div class="cart-item container border-bottom font-anek">
+                <div class="justify-self-start flex align-center">
+                    <a href="product.html"><img src="../images/products_dummy/4.jpeg" alt="Image 4" width="100"></a>
+                    <div class="margin-inline-20">
+                        <a href="product.html"><h4 class="spacing-2">Title 4</h4></a>
+                        <div>Size: S</div>
+                    </div>
+                </div>
+                <div class="spacing-2 mobile-display-none">$30.00</div>
+                <div>2</div>
+                <i class="far fa-trash-alt"></i>
+                <div class="justify-self-end spacing-2">$60.00</div>
+            </div>
+            <div class="flex-column margin-top-30 align-items-end font-anek spacing-2 container-without-padding">
+                <div class="bg-black">
+                    <div class="inner-container">
+                        <div>Subtotal:</div>
+                        <div class="flex-1 text-right">$95.00</div>
+                    </div>
+                    <div class="inner-container border-bottom">
+                        <div>Shipping:</div>
+                        <div class="flex-1 text-right">$5.00</div>
+                    </div>
+                    <div class="inner-container">
+                        <div>Total:</div>
+                        <div class="flex-1 text-right">$100.00</div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-space-between container-without-padding text-center">
+                <a href="shop.html">
+                    <div class="margin-top-30 align-items-end font-anek spacing-2 container-without-padding bg-black padding-20 w-min-content flex align-center">
+                        <i class="fas fa-arrow-left p-l-0"></i>
+                        CONTINUE SHOPPING
+                    </div>
+                </a>
+                <a href="checkout.html">
+                    <div class="margin-top-30 align-items-end font-anek spacing-2 container-without-padding bg-black padding-20 w-min-content flex align-baseline">
+                        CHECKOUT
+                        <i class="fas fa-arrow-right p-r-0"></i>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+
+
+        <footer id="footer">
+            <div class="flex justify-space-between social-con font-anek">
+                <h3 class="center">SOUTHEND APPAREL</h3>
+                <div id="social-media" class="flex justify-center">
+                    <a href="#" target="_blank"><i class="fab fa-facebook-square"></i></a>
+                    <a href="https://www.instagram.com/southend_apparel/" target="_blank"><i class="fab fa-instagram-square"></i></a>
+                </div>
+            </div>
+            <div class="font-anek center">Omirou 3, Argyroupoli</div>
+            <div class="font-anek border-bottom center">Athens 16451</div>
+            <div class="flex justify-space-between footer-sitemap">
+                <h6 class="font-anek">@ SOUTHEND APPAREL 2022</h6>
+                <ul id="footer-menu" class="flex font-anek">
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="terms.html">TERMS</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+    <div class="container flex" id="navbar-mobile">
+        <li>
+            <h3>MENU</h3>
+            <i id="close" class="fas fa-times"></i>
+        </li>
+        <li><a href="shop.html">SHOP</a></li>
+        <li><a href="collections.html">COLLECTIONS</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+    </div>
+    <script src="../src/js/index.js"></script>
+</body>
+</html>
