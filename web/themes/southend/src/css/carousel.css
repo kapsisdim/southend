@@ -2,13 +2,34 @@
 Optional styles
 */
 
-.splide {
-    max-width: 50%;
+.splide__slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.splide__slide {
+    opacity: 0.5;
+}
+
+.splide__slide.is-active {
+    opacity: 1;
+}
+
+
+#main-carousel {
+    margin-bottom: 30px;
+}
+
+#thumbnail-carousel {
+    margin-bottom: 40px;
+}
+/* .splide {
     height: fit-content;
 }
 
 .splide__slide {
-    min-height: 200px;
+    min-height: 150px;
     text-align: center;
 }
 
@@ -26,4 +47,4 @@ Optional styles
         max-width: 1000px;
         margin-bottom: 30px;
     }
-}
+} */

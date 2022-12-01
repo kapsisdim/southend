@@ -18,16 +18,50 @@
                     <i id="bars" class="fa fa-bars"></i>
                 </div>
                 <div class="header-item">
-                    <a href="home.html">
+                    <a href="index.html">
                         <img src="../images/logo.svg" alt="logo" width="250" class="logo">
                     </a>
                 </div>
                 <div class="justify-self-end flex align-center">
                     <li><a ><i href="search.html" class="fas fa-search"></i></a></li>
-                    <li id="cart-container">
-                        <a href="cart.html"><i class="fas fa-shopping-bag"></i></a>
-                        <div class="mini-cart font-anek">
+                    <li id="cart-container" class="cart-hovering">
+                        <button><i class="fas fa-shopping-bag"></i></button>
+                        <!-- <div class="mini-cart font-anek">
                             Your shopping cart is empty!
+                        </div> -->
+                        <div id="mini-cart" class="mini-cart-hidden font-anek not-empty cart-hovering">
+                            <div class="flex justify-space-between font-anek align-center">
+                                <a href="product.html">
+                                    <img src="../images/products_dummy/1.jpeg" alt="image1" width="100" height="100">
+                                </a>
+                                <div>
+                                    <div>TITLE 1</div>
+                                    <div>Size: M</div>
+                                </div>
+                                <div>x1</div>
+                                <div>$20.00</div>
+                                <i class="far fa-trash-alt"></i>
+                            </div>
+                            <div class="flex justify-space-between font-anek align-center">
+                                <a href="product.html">
+                                    <img src="../images/products_dummy/2.jpeg" alt="image1" width="100" height="100">
+                                </a>
+                                <div>
+                                    <div>TITLE 2</div>
+                                    <div>Size: L</div>
+                                </div>
+                                <div>x1</div>
+                                <div>$35.00</div>
+                                <i class="far fa-trash-alt"></i>
+                            </div>
+                            <div class="flex justify-end total">
+                                <div>Total:</div>
+                                <div>$55.00</div>
+                            </div>
+                            <div class="flex mini-cart-buttons justify-space-between">
+                                <a class="mini-cart-button" href="cart.html">CART</a>
+                                <a class="mini-cart-button" href="checkout.html">CHECKOUT</a>
+                            </div>
                         </div>
                     </li>
                 </div>
@@ -42,7 +76,15 @@
                         <a href=""><div class="submenu-link">Category 4</div></a>
                     </div>
                 </li>
-                <li><a href="collections.html">COLLECTIONS</a></li>
+                <li class="drop-down-button">
+                    <a class="active" href="collections.html">COLLECTIONS</a>
+                    <div class="drop-down">
+                        <a href=""><div class="submenu-link">Collection 1</div></a>
+                        <a href=""><div class="submenu-link">Collection 2</div></a>
+                        <a href=""><div class="submenu-link">Collection 3</div></a>
+                        <a href=""><div class="submenu-link">Collection 4</div></a>
+                    </div>
+                </li>
                 <li><a href="about.html">ABOUT</a></li>
                 <li><a href="contact.html">CONTACT</a></li>
             </div>
@@ -50,56 +92,71 @@
 
         <section class="main-container">
             <div class="container bg-black">
+                <div class="protitle">
+                    <h1>TITLE 1</h1>
+                    <div class="price">$20.00</div>
+                </div>
                 <div class="teaser">
-                    <div class="splide">
-                        <div class="splide__track" id="splide-track">
-                            <ul class="splide__list">
-                                <li class="splide__slide">
-                                    <img src="../images/products_dummy/1.jpeg" alt="image1">
-                                </li>
+                    <div class="photos">
+                        <section id="main-carousel" class="splide" aria-label="Beautiful Images">
+                            <div class="splide__track">
+                                <div class="splide__list">
+                                    <li class="splide__slide">
+                                        <img src="../images/products_dummy/1.jpeg" alt="image1" >
+                                    </li>
+                                    <li class="splide__slide">
+                                        <img src="../images/products_dummy/2.jpeg" alt="image2" >
+                                    </li>
+                                    <li class="splide__slide">
+                                        <img src="../images/products_dummy/3.jpeg" alt="image3" >
+                                    </li>
+                                    <li class="splide__slide">
+                                        <img src="../images/products_dummy/2.jpeg" alt="image2" >
+                                    </li>
+                                </div>
+                            </div>
+                        </section>
+                        <section id="thumbnail-carousel" class="splide" aria-label="The carousel with thumbnails. Selecting a thumbnail will change the Beautiful Gallery carousel.">
+                            <div class="splide__track">
+                                    <ul class="splide__list">
+                                        <li class="splide__slide">
+                                            <img src="../images/products_dummy/1.jpeg" alt="image1" >
+                                        </li>
+                                        <li class="splide__slide">
+                                            <img src="../images/products_dummy/2.jpeg" alt="image2" >
+                                        </li>
+                                        <li class="splide__slide">
+                                            <img src="../images/products_dummy/3.jpeg" alt="image3" >
+                                        </li>
+                                        <li class="splide__slide">
+                                            <img src="../images/products_dummy/2.jpeg" alt="image2" >
+                                        </li>
+                                    </ul>
+                            </div>
+                        </section>
+                    </div>
 
-                                <li class="splide__slide">
-                                    <img src="../images/products_dummy/2.jpeg" alt="image2">
-                                </li>
-
-                                <li class="splide__slide">
-                                    <img src="../images/products_dummy/3.jpeg" alt="image3">
-                                </li>
-
-                                <li class="splide__slide">
-                                    <img src="../images/products_dummy/4.jpeg" alt="image4">
-                                </li>
-
-                            </ul> <!-- /.splide__list -->
-                        </div> <!-- /.splide__track -->
-                    </div> <!-- /.splide -->
                     <div id="description">
-                        <div class="protitle">
-                            <h1>TITLE 1</h1>
-                            <h6 class="font-anek">SKU: 12345</h6>
-                        </div>
-
-                        <div class="price">$20.00</div>
-
-                        <div class="font-anek">
+                        <div class="font-anek flex-column">
+                            <p class="font-anek">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque quaerat doloribus nesciunt amet, laboriosam vero deleniti cum dolorem similique cupiditate ipsa totam pariatur voluptatum fuga harum asperiores qui. Facilis, quam.</p>
                             <form action="" id="cart-form">
                                 <h3 class="pro-form">Select Size</h3>
                                 <div class="selector">
                                     <div class="selecotr-item">
-                                        <input type="radio" name="size" id="S" value="S" class="selector-item_radio">
-                                        <label class="selector-item_label" for="S">S</label>
+                                        <input type="radio" name="size" id="S" value="S" class="selector-item-radio">
+                                        <label class="selector-item-label" for="S">S</label>
                                     </div>
                                     <div class="selecotr-item">
-                                        <input type="radio" name="size" id="M" class="selector-item_radio" value="M">
-                                        <label class="selector-item_label" for="M">M</label>
+                                        <input type="radio" name="size" id="M" class="selector-item-radio" value="M">
+                                        <label class="selector-item-label" for="M">M</label>
                                     </div>
                                     <div class="selecotr-item">
-                                        <input type="radio" name="size" id="L" class="selector-item_radio"value="L">
-                                        <label class="selector-item_label" for="L">L</label>
+                                        <input type="radio" name="size" id="L" class="selector-item-radio"value="L">
+                                        <label class="selector-item-label" for="L">L</label>
                                     </div>
                                     <div class="selecotr-item">
-                                        <input type="radio" name="size" id="XL" class="selector-item_radio"value="XL">
-                                        <label class="selector-item_label" for="XL">XL</label>
+                                        <input type="radio" name="size" id="XL" class="selector-item-radio"value="XL">
+                                        <label class="selector-item-label" for="XL">XL</label>
                                     </div>
                                 </div>
                                 <h3 class="pro-form">Quantity</h3>
@@ -111,9 +168,6 @@
                                 <button class="btn"><span>Add to cart</span></button>
                             </form>
                         </div>
-
-                        <p class="font-anek">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque quaerat doloribus nesciunt amet, laboriosam vero deleniti cum dolorem similique cupiditate ipsa totam pariatur voluptatum fuga harum asperiores qui. Facilis, quam.</p>
-
                     </div>
                 </div>
             </div>
@@ -151,6 +205,7 @@
     </div>
 
     <script src="../src/js/index.js"></script>
+    <script src="../src/js/cart-form.js"></script>
     <script src="../src/js/carousel.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.15/dist/js/splide.min.js"></script>
 </body>
